@@ -1,0 +1,21 @@
+#include <iostream>
+#include <string>
+#include <iomanip> 
+
+int main() {
+    std::string movieTitle;
+    double capCost;
+
+    std::cin >> movieTitle >> capCost;
+
+    // Calculate the length of the movie title
+    int titleLength = movieTitle.length();
+
+    // Compute the minimum cost
+    double cost = std::min(static_cast<double>(titleLength), capCost);
+
+    // Output the result with high precision
+    std::cout << std::fixed << std::setprecision(8) << cost << std::endl;
+
+    return 0;
+}
